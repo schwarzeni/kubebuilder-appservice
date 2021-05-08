@@ -1,0 +1,12 @@
+apiVersion: batch.schwarzeni.github.com/v1alpha1
+kind: AppService
+metadata:
+  name: nginx-app
+spec:
+  replicas: 2
+  image: nginx:alpine
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30000
+

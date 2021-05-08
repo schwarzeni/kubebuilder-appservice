@@ -1,0 +1,16 @@
+domain: schwarzeni.github.com
+layout:
+- go.kubebuilder.io/v3
+projectName: kubebuilder-appservice
+repo: github.com/schwarzeni/kubebuilder-appservice
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: schwarzeni.github.com
+  group: batch
+  kind: AppService
+  path: github.com/schwarzeni/kubebuilder-appservice/api/v1alpha1
+  version: v1alpha1
+version: "3"

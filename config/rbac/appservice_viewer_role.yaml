@@ -1,0 +1,20 @@
+# permissions for end users to view appservices.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: appservice-viewer-role
+rules:
+- apiGroups:
+  - batch.schwarzeni.github.com
+  resources:
+  - appservices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.schwarzeni.github.com
+  resources:
+  - appservices/status
+  verbs:
+  - get
